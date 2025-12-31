@@ -56,6 +56,10 @@ Display time
 
 Display total seconds
 
+
+📸 Output Screenshots:-
+
+
 🧮 Theory Behind Conversions:-
 
 ⏱ Seconds ➝ HH:MM:SS
@@ -98,3 +102,4 @@ formats
 
 This program is a simple yet powerful example of logic + OOP + real-world application.
 It shows how programming can solve day-to-day problems clearly and efficiently.
+
