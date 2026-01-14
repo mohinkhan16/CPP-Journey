@@ -40,6 +40,16 @@ Polymorphism – Virtual functions & method overriding
 
 Encapsulation – Private and protected data members
 
+🎯 Learning Outcomes
+Strong understanding of C++ OOP principles
+
+Practical use of polymorphism and inheritance
+
+Real-world class hierarchy design
+
+Experience with STL containers and smart pointers
+
+
 Static Members – Total vehicle counter
 
 Smart Pointers – shared_ptr for memory management
