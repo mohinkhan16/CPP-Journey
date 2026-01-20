@@ -71,3 +71,6 @@ Clear understanding of abstract classes and virtual functions
 Practical experience with runtime polymorphism
 
 Better understanding of inheritance and encapsulation in C++
+
+screenshot:-
+
