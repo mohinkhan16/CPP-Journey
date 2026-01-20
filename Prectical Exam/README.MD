@@ -129,29 +129,6 @@ model  : BMW
 
 ---
 
-## ▶️ How to Run the Programs
 
-```bash
-g++ filename.cpp
-./a
-```
 
-Replace `filename.cpp` with the required source file.
 
----
-
-## 📸 Screenshots
-
-Screenshots of program execution outputs are included for verification and evaluation purposes.
-
----
-
-## ✅ Conclusion
-
-This project successfully demonstrates fundamental **OOP principles in C++** and fulfills the academic practical requirements.
-
----
-
-**👤 Author:** Mohin Pathan
-
-**📚 Subject:** Object-Oriented Programming using C++
