@@ -40,6 +40,33 @@ Roll No: 102
 ```
 
 ---
+### 🔹 3q.cpp-Car Class Program – Setter & Getter Example
+
+**Concepts Used:**
+
+* Encapsulation
+* Setter and Getter Methods
+
+**Description:**
+Demonstrates setting and displaying car details using member functions.
+
+**Code Snippet:**
+
+```cpp
+Car C;
+C.set("BMW", 2022, 250);
+C.getdata();
+```
+
+**Output:**
+
+```
+model  : BMW
+year   : 2022
+model  : BMW
+```
+
+---
 
 ### 🔹 3q.cpp – Device Inheritance Example
 
@@ -100,35 +127,6 @@ Fish swim
 ```
 
 ---
-
-### 🔹 Car Class Program – Setter & Getter Example
-
-**Concepts Used:**
-
-* Encapsulation
-* Setter and Getter Methods
-
-**Description:**
-Demonstrates setting and displaying car details using member functions.
-
-**Code Snippet:**
-
-```cpp
-Car C;
-C.set("BMW", 2022, 250);
-C.getdata();
-```
-
-**Output:**
-
-```
-model  : BMW
-year   : 2022
-model  : BMW
-```
-
----
-
 
 
 
