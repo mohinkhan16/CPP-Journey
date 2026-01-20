@@ -1,242 +1,157 @@
-📘 C++ OOP Programs Collection
-This repository contains multiple C++ Object-Oriented Programming (OOP) examples. These programs demonstrate core OOP concepts such as:
+# C++ OOP Practical Programs
 
-Classes and Objects
+## 📌 Project Overview
 
-Constructors
+This repository contains **C++ practical programs** demonstrating core **Object-Oriented Programming (OOP)** concepts. These programs were written, compiled, and executed using **VS Code** and **g++ compiler**.
 
-Encapsulation
+The project is intended for **academic/practical examination purposes** and covers topics such as **classes & objects, encapsulation, inheritance, polymorphism, constructors, and dynamic memory allocation**.
 
-Inheritance
+---
 
-Polymorphism
+## 🛠️ Tools & Technologies
 
-Abstraction (Pure Virtual Functions)
+* Language: **C++**
+* Compiler: **g++ (GNU Compiler)**
+* IDE: **Visual Studio Code**
+* OS: **Windows**
 
-📂 Programs Included
-Student Management System (Constructor & Objects)
+---
 
-Car Information System (Encapsulation using Set/Get)
+## 📂 Program List
 
-Device System (Inheritance Example)
+### 🔹 1q.cpp – Student Class (Encapsulation & Constructor)
 
-Discount System (Polymorphism Example)
+**Concepts Used:**
 
-Animal System (Abstraction Example)
+* Class & Object
+* Private Data Members
+* Parameterized Constructor
 
-1️⃣ Student Management System
-🔹 Description
-This program demonstrates:
+**Description:**
+Creates a `Student` class with private data members and displays student details using a constructor.
 
-Use of constructor
+**Output Example:**
 
-Array of objects
-
-Displaying student details
-
-🔹 Source Code
-#include <iostream>
-using namespace std;
-
-class Student {
-private:
-    string name;
-    int rollNumber;
-
-public:
-    Student(string n, int r) {
-        name = n;
-        rollNumber = r;
-    }
-
-    void display() {
-        cout << "Name: " << name << endl;
-        cout << "Roll No: " << rollNumber << endl;
-    }
-};
-
-int main() {
-    Student students[2]{
-        Student("Alice", 101),
-        Student("Bob", 102)
-    };
-
-    for (int i = 0; i < 2; i++) {
-        students[i].display();
-    }
-
-    return 0;
-}
-🔹 Sample Output
-Name: Alice
+```
+Name: alice
 Roll No: 101
-Name: Bob
+Name: bob
 Roll No: 102
-2️⃣ Car Information System
-🔹 Description
-This program demonstrates:
+```
 
-Encapsulation
+---
 
-Setting and getting values using member functions
+### 🔹 3q.cpp – Device Inheritance Example
 
-🔹 Source Code
-#include <iostream>
-#include <string>
-using namespace std;
+**Concepts Used:**
 
-class Car {
-private:
-    string model;
-    int year;
-    int speed;
+* Inheritance
+* Protected Members
 
-public:
-    void set(string m, int y, int s) {
-        model = m;
-        year = y;
-        speed = s;
-    }
+**Description:**
+A base class `Device` is inherited by `Laptop` and `SmartPhone` classes to demonstrate reuse of properties.
 
-    void getdata() {
-        cout << "Model: " << model << endl;
-        cout << "Year: " << year << endl;
-        cout << "Speed: " << speed << endl;
-    }
-};
+**Output Example:**
 
-int main() {
-    Car C;
-    C.set("BMW", 2022, 250);
-    C.getdata();
+```
+Laptop : Dell 65
+SmartPhone : Vivo 20
+```
 
-    return 0;
-}
-🔹 Sample Output
-Model: BMW
-Year: 2022
-Speed: 250
-3️⃣ Device System (Inheritance Example)
-🔹 Description
-This program demonstrates:
+---
 
-Inheritance
+### 🔹 4q.cpp – Discount Calculation
 
-Protected data members
+**Concepts Used:**
 
-Reusability of base class properties
+* Class Methods
+* Data Encapsulation
 
-🔹 Source Code
-🔹 Sample Output
-Laptop: Dell 65
-SmartPhone: Vivo 20
-4️⃣ Discount System (Polymorphism Example)
-🔹 Description
-This program demonstrates:
+**Description:**
+Calculates total amount and discount using class member functions.
 
-Method overriding
+**Output Example:**
 
-Runtime Polymorphism using virtual function
+```
+total calculate is : 500
+total calculate discount is : 1000
+```
 
-🔹 Source Code
-#include <iostream>
-using namespace std;
+---
 
-class Device {
-public:
-    virtual int calculateDiscount() {
-        return 0;
-    }
-};
+### 🔹 5q.cpp – Polymorphism with Animals
 
-class Person : public Device {
-public:
-    int calculateDiscount() {
-        return 500;
-    }
-};
+**Concepts Used:**
 
-class Call : public Device {
-public:
-    int calculateDiscount() {
-        return 1000;
-    }
-};
+* Polymorphism
+* Virtual Functions
+* Dynamic Memory Allocation
 
-int main() {
-    Person p;
-    Call c;
+**Description:**
+Uses base class `Animal` with derived classes like `Lion` and `Fish` to demonstrate runtime polymorphism.
 
-    cout << "Total discount is: " << p.calculateDiscount() << endl;
-    cout << "Total discount is: " << c.calculateDiscount() << endl;
+**Output Example:**
 
-    return 0;
-}
-🔹 Sample Output
-Total discount is: 500
-Total discount is: 1000
-5️⃣ Animal System (Abstraction Example)
-🔹 Description
-This program demonstrates:
-
-Abstraction using pure virtual functions
-
-Dynamic binding using base class pointer
-
-🔹 Source Code
-#include <iostream>
-using namespace std;
-
-class Animal {
-public:
-    virtual void makeSound() = 0;
-    virtual void move() = 0;
-};
-
-class Lion : public Animal {
-public:
-    void makeSound() {
-        cout << "Lion sound" << endl;
-    }
-
-    void move() {
-        cout << "Lion move" << endl;
-    }
-};
-
-class Fish : public Animal {
-public:
-    void makeSound() {
-        cout << "Fish sound" << endl;
-    }
-
-    void move() {
-        cout << "Fish swim" << endl;
-    }
-};
-
-int main() {
-    Animal* animals[2];
-
-    animals[0] = new Lion();
-    animals[1] = new Fish();
-
-    for (int i = 0; i < 2; i++) {
-        animals[i]->makeSound();
-        animals[i]->move();
-        cout << endl;
-    }
-
-    for (int i = 0; i < 2; i++) {
-        delete animals[i];
-    }
-
-    return 0;
-}
-🔹 Sample Output
-Lion sound
-Lion move
-
-Fish sound
+```
+lion sound
+lion move
+Fish move
 Fish swim
+```
 
+---
+
+### 🔹 Car Class Program – Setter & Getter Example
+
+**Concepts Used:**
+
+* Encapsulation
+* Setter and Getter Methods
+
+**Description:**
+Demonstrates setting and displaying car details using member functions.
+
+**Code Snippet:**
+
+```cpp
+Car C;
+C.set("BMW", 2022, 250);
+C.getdata();
+```
+
+**Output:**
+
+```
+model  : BMW
+year   : 2022
+model  : BMW
+```
+
+---
+
+## ▶️ How to Run the Programs
+
+```bash
+g++ filename.cpp
+./a
+```
+
+Replace `filename.cpp` with the required source file.
+
+---
+
+## 📸 Screenshots
+
+Screenshots of program execution outputs are included for verification and evaluation purposes.
+
+---
+
+## ✅ Conclusion
+
+This project successfully demonstrates fundamental **OOP principles in C++** and fulfills the academic practical requirements.
+
+---
+
+**👤 Author:** Mohin Pathan
+
+**📚 Subject:** Object-Oriented Programming using C++
