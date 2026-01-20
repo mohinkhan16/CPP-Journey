@@ -1,14 +1,40 @@
-C++ Programs Collection
+📘 C++ OOP Programs Collection
+This repository contains multiple C++ Object-Oriented Programming (OOP) examples. These programs demonstrate core OOP concepts such as:
 
-This repository contains multiple C++ programs demonstrating various concepts including classes, constructors, inheritance, polymorphism, and abstract classes. Each program includes a brief description and the output.
+Classes and Objects
 
-1. Student Class Program
+Constructors
 
-Description:
-This program demonstrates a simple Student class with a constructor, private members, and a method to display student information.
+Encapsulation
 
-Code:
+Inheritance
 
+Polymorphism
+
+Abstraction (Pure Virtual Functions)
+
+📂 Programs Included
+Student Management System (Constructor & Objects)
+
+Car Information System (Encapsulation using Set/Get)
+
+Device System (Inheritance Example)
+
+Discount System (Polymorphism Example)
+
+Animal System (Abstraction Example)
+
+1️⃣ Student Management System
+🔹 Description
+This program demonstrates:
+
+Use of constructor
+
+Array of objects
+
+Displaying student details
+
+🔹 Source Code
 #include <iostream>
 using namespace std;
 
@@ -16,11 +42,13 @@ class Student {
 private:
     string name;
     int rollNumber;
+
 public:
     Student(string n, int r) {
         name = n;
         rollNumber = r;
     }
+
     void display() {
         cout << "Name: " << name << endl;
         cout << "Roll No: " << rollNumber << endl;
@@ -28,9 +56,9 @@ public:
 };
 
 int main() {
-    Student students[2]{ 
-        Student("alice", 101), 
-        Student("bob", 102) 
+    Student students[2]{
+        Student("Alice", 101),
+        Student("Bob", 102)
     };
 
     for (int i = 0; i < 2; i++) {
@@ -39,22 +67,20 @@ int main() {
 
     return 0;
 }
-
-
-Output:
-
-Name: alice
+🔹 Sample Output
+Name: Alice
 Roll No: 101
-Name: bob
+Name: Bob
 Roll No: 102
+2️⃣ Car Information System
+🔹 Description
+This program demonstrates:
 
-2. Car Class Program
+Encapsulation
 
-Description:
-This program demonstrates a Car class with a method to set and get data.
+Setting and getting values using member functions
 
-Code:
-
+🔹 Source Code
 #include <iostream>
 #include <string>
 using namespace std;
@@ -64,12 +90,14 @@ private:
     string model;
     int year;
     int speed;
+
 public:
     void set(string m, int y, int s) {
         model = m;
         year = y;
         speed = s;
     }
+
     void getdata() {
         cout << "Model: " << model << endl;
         cout << "Year: " << year << endl;
@@ -81,127 +109,81 @@ int main() {
     Car C;
     C.set("BMW", 2022, 250);
     C.getdata();
+
     return 0;
 }
-
-
-Output:
-
+🔹 Sample Output
 Model: BMW
 Year: 2022
 Speed: 250
+3️⃣ Device System (Inheritance Example)
+🔹 Description
+This program demonstrates:
 
-3. Device Inheritance Program
+Inheritance
 
-Description:
-This program demonstrates single inheritance with a base class Device and derived classes Laptop and SmartPhone.
+Protected data members
 
-Code:
+Reusability of base class properties
 
-#include <iostream>
-using namespace std;
-
-class Device {
-protected:
-    string brand;
-    int power;
-};
-
-class Laptop : public Device {
-public:
-    void setDevice(string b, int p) {
-        brand = b;
-        power = p;
-    }
-    void display() {
-        cout << "Laptop: " << brand << " " << power << endl;
-    }
-};
-
-class SmartPhone : public Device {
-public:
-    void setDevice(string b, int p) {
-        brand = b;
-        power = p;
-    }
-    void display() {
-        cout << "SmartPhone: " << brand << " " << power << endl;
-    }
-};
-
-int main() {
-    Laptop l;
-    SmartPhone s;
-
-    l.setDevice("Dell", 65);
-    l.display();
-
-    s.setDevice("Vivo", 20);
-    s.display();
-
-    return 0;
-}
-
-
-Output:
-
+🔹 Source Code
+🔹 Sample Output
 Laptop: Dell 65
 SmartPhone: Vivo 20
+4️⃣ Discount System (Polymorphism Example)
+🔹 Description
+This program demonstrates:
 
-4. Polymorphism with Discount Program
+Method overriding
 
-Description:
-This program demonstrates runtime polymorphism using virtual functions for calculating discounts.
+Runtime Polymorphism using virtual function
 
-Code:
-
+🔹 Source Code
 #include <iostream>
 using namespace std;
 
 class Device {
 public:
-    int calculateDiscount() {
+    virtual int calculateDiscount() {
         return 0;
     }
 };
 
 class Person : public Device {
 public:
-    virtual int calculateDiscount() {
+    int calculateDiscount() {
         return 500;
     }
 };
 
 class Call : public Device {
 public:
-    virtual int calculateDiscount() {
+    int calculateDiscount() {
         return 1000;
     }
 };
 
 int main() {
     Person p;
-    Call C;
+    Call c;
 
-    cout << "Total calculate is: " << p.calculateDiscount() << endl;
-    cout << "Total calculate discount is: " << C.calculateDiscount() << endl;
+    cout << "Total discount is: " << p.calculateDiscount() << endl;
+    cout << "Total discount is: " << c.calculateDiscount() << endl;
 
     return 0;
 }
+🔹 Sample Output
+Total discount is: 500
+Total discount is: 1000
+5️⃣ Animal System (Abstraction Example)
+🔹 Description
+This program demonstrates:
 
+Abstraction using pure virtual functions
 
-Output:
+Dynamic binding using base class pointer
 
-Total calculate is: 500
-Total calculate discount is: 1000
-
-5. Abstract Class with Animal Program
-
-Description:
-This program demonstrates abstract classes and pure virtual functions with Animal as the base class and Lion and Fish as derived classes.
-
-Code:
-
+🔹 Source Code
 #include <iostream>
 using namespace std;
 
@@ -213,18 +195,29 @@ public:
 
 class Lion : public Animal {
 public:
-    void makeSound() { cout << "Lion sound" << endl; }
-    void move() { cout << "Lion move" << endl; }
+    void makeSound() {
+        cout << "Lion sound" << endl;
+    }
+
+    void move() {
+        cout << "Lion move" << endl;
+    }
 };
 
 class Fish : public Animal {
 public:
-    void makeSound() { cout << "Fish move" << endl; }
-    void move() { cout << "Fish swim" << endl; }
+    void makeSound() {
+        cout << "Fish sound" << endl;
+    }
+
+    void move() {
+        cout << "Fish swim" << endl;
+    }
 };
 
 int main() {
     Animal* animals[2];
+
     animals[0] = new Lion();
     animals[1] = new Fish();
 
@@ -240,12 +233,9 @@ int main() {
 
     return 0;
 }
-
-
-Output:
-
+🔹 Sample Output
 Lion sound
 Lion move
 
-Fish move
+Fish sound
 Fish swim
