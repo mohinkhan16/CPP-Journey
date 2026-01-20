@@ -40,7 +40,7 @@ Roll No: 102
 ```
 
 ---
-### 🔹 3q.cpp-Car Class Program – Setter & Getter Example
+### 🔹 2q.cpp-Car Class Program – Setter & Getter Example
 
 **Concepts Used:**
 
